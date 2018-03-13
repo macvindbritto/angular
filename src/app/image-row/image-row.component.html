@@ -1,5 +1,5 @@
 <div>
-	<table>
+	<table stle="table-layout: auto;" style="width: 100%;" cellspacing="0">
 		<tbody>
 			<tr>
 				<td width="16.66%"></td>
@@ -8,16 +8,38 @@
 				<td width="16.66%"></td>
 				<td width="16.66%"></td>
 				<td width="16.66%"></td>
-				
+
 			</tr>
-			<tr *ngFor="let imageList of displayArray; let i = index;">
-				<td [style.height]="imgNumber == bigImageIndex ? '340px' : '170px'" 
-				*ngFor="let imgNumber of imageList; let j = index;" 
-				(mousemove)="mouseOutEvent();" (mouseover)="mouseInEvent(imgNumber,i,j);" 
-				[rowSpan]="imgNumber == bigImageIndex ? 2 : 1" [colSpan]="imgNumber == bigImageIndex ? 2 : 1">
-					<img [src]="imgNumber == bigImageIndex ? imagesDisplay1[imgNumber] : imagesDisplay[imgNumber]" style="height: 100%; width: 100%;">
+
+			<tr *ngFor="let imageList of displayGrid1; let i = index;">
+				<td  [style.height]="imgNumber == bigImageIndex1 ? '340px' : '170px'"
+				[style.width]="imgNumber == bigImageIndex1 ? '340px' : '170px'"
+					*ngFor="let imgNumber of imageList; let j = index;"
+					(mousemove)="mouseOutEvent();"
+					(mouseover)="mouseInEvent(imgNumber,1);"
+					[rowSpan]="imgNumber == bigImageIndex1 ? 2 : 1"
+					[colSpan]="imgNumber == bigImageIndex1 ? 2 : 1"
+					>
+					<a href=#>
+					<img [src]="imgNumber == bigImageIndex1 ? imagesDisplay1[imgNumber] : imagesDisplay[imgNumber]"
+					style="height: 100%; width: 100%;">
+					</a></td>
+			</tr>
+			<tr *ngFor="let imageList of displayGrid2; let i = index;">
+				<td [style.height]="imgNumber == bigImageIndex2 ? '340px' : '170px'"
+					[style.transition]="'5s'"
+					*ngFor="let imgNumber of imageList; let j = index;"
+					(mousemove)="mouseOutEvent();"
+					(mouseover)="mouseInEvent(imgNumber,2);"
+					[rowSpan]="imgNumber == bigImageIndex2 ? 2 : 1"
+					[colSpan]="imgNumber == bigImageIndex2 ? 2 : 1">
+					<a href=#>
+					<img
+					[src]="imgNumber == bigImageIndex2 ? imagesDisplay2[imgNumber] : imagesDisplay3[imgNumber]"
+					style="height: 100%; width: 100%;">
+					</a>
 				</td>
-				
+
 			</tr>
 		</tbody>
 	</table>

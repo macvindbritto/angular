@@ -1,20 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
 import { ImageRowComponent } from './image-row/image-row.component';
-import { ImageRowComponent1 } from './image-row/image-row.component1';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageRowComponent,
-    ImageRowComponent1
+    ImageRowComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

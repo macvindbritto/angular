@@ -1,0 +1,14 @@
+td img {
+	display: block;
+}
+
+td{
+	padding : 1px;
+}
+
+.img:hover {
+  transition: all ease 10s;
+  position: absolute;
+}
+ 
+
